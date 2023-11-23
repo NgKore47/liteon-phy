@@ -70,12 +70,11 @@ echo "LIBXRANSO = ${LIBXRANSO}"
 echo "MLOG      = ${MLOG}"
 
 cd $XRAN_FH_LIB_DIR
-make clean
 make $COMMAND_LINE MLOG=${MLOG} LIBXRANSO=${LIBXRANSO} #DEBUG=1 VERBOSE=1
 
-#echo 'Building xRAN Test Application'
-#cd $XRAN_FH_APP_DIR
-#make $COMMAND_LINE MLOG=${MLOG} #DEBUG=1 VERBOSE=1
+echo 'Building xRAN Test Application'
+cd $XRAN_FH_APP_DIR
+make $COMMAND_LINE MLOG=${MLOG} #DEBUG=1 VERBOSE=1
 
 if [ -z ${GTEST_ROOT+x} ];
 then

@@ -1,6 +1,6 @@
 /******************************************************************************
 *
-*   Copyright (c) 2019 Intel.
+*   Copyright (c) 2020 Intel.
 *
 *   Licensed under the Apache License, Version 2.0 (the "License");
 *   you may not use this file except in compliance with the License.
@@ -29,6 +29,7 @@
 #include <complex>
 #include <algorithm>
 #include <limits.h>
+#include <limits>
 
 static int16_t saturateAbs(int16_t inVal)
 {
