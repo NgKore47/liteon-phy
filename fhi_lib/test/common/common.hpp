@@ -1,6 +1,19 @@
 /*******************************************************************************
  *
- * <COPYRIGHT_TAG>
+ * Copyright (c) 2020 Intel.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
  *
  *******************************************************************************/
 
@@ -31,7 +44,7 @@
 #include <rte_malloc.h>
 #endif
 
-//#include "gtest/gtest.h"
+#include "gtest/gtest.h"
 
 #include "common_typedef_xran.h"
 
@@ -106,7 +119,7 @@ json read_json_from_file(const std::string &filename);
     \return Pointer to the allocated memory with data from the file.
     \throws std::runtime_error when memory cannot be allocated.
 */
-//char* read_data_to_aligned_array(const std::string &filename);
+char* read_data_to_aligned_array(const std::string &filename);
 
 /*!
     \brief Measure the TSC on the machine
@@ -140,7 +153,6 @@ unsigned long tsc_tick();
     values, e.g. 1, 0.001, 5e-05, etc. or filename. Depends on the get type test framework can either
     read the value or load data from the file - and it happens automatically (*pff* MAGIC!).
 */
-#if 0
 class KernelTests : public testing::TestWithParam<unsigned>
 {
 public:
@@ -828,6 +840,5 @@ T* generate_random_real_numbers(const long size, const unsigned alignment, const
 
     return generate_random_numbers<T, std::uniform_real_distribution<T>>(size, alignment, distribution);
 }
-#endif
 
 #endif //XRANLIB_COMMON_HPP
